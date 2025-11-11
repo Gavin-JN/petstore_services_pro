@@ -1,0 +1,92 @@
+.order-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #333;
+}
+
+.order-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.label {
+    font-weight: bold;
+    background-color: #f8f8f8;
+    width: 120px;
+}
+
+.value {
+    background-color: #fcfcfc;
+}
+
+.header-row td {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: left;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+.total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fdfdfd;
+    border-top: 2px solid #aaa;
+}
+
+.pay-button-cell {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pay-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .order-table td,
+    .label,
+    .value {
+        display: block;
+        width: 100%;
+    }
+
+    .header-row {
+        display: none;
+    }
+
+    .order-table tr {
+        margin-bottom: 20px;
+        display: block;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .total, .pay-button-cell {
+        text-align: center;
+    }
+}

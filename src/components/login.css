@@ -1,0 +1,79 @@
+/* login.css - 干净无全局污染，支持 GitHub 登录和注册链接 */
+
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-input {
+  padding: 0.75rem 1rem;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* 默认按钮样式 */
+.login-button {
+  padding: 0.75rem;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* hover 效果 */
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+第二个按钮（GitHub 登录）的特殊样式，可选
+.login-form button:nth-of-type(2) {
+  background-color: #333;
+}
+
+.login-form button:nth-of-type(2):hover {
+  background-color: #000;
+}
+
+/* 注册链接样式 */
+.login-form a {
+  margin-top: 0.5rem;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.login-form a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* 登录提示信息样式 */
+.login-message {
+  margin-top: 1rem;
+  color: #ff4d4f;
+  font-weight: bold;
+}

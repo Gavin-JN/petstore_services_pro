@@ -1,0 +1,81 @@
+/* 容器整体居中 */
+.userDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* 表单容器美化 */
+.tableCss {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-collapse: separate;
+    border-spacing: 12px;
+}
+
+/* 表单标题 */
+.pDiv {
+    text-align: center;
+    margin-top: 30px;
+}
+.pCss {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 文本框统一样式 */
+.textCss {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* 提交按钮样式 */
+.butCss {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.butCss:hover {
+    background-color: #45a049;
+}
+
+/* 返回链接样式 */
+#BackLink {
+    margin: 20px;
+}
+
+#BackLink a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#BackLink a:hover {
+    color: #388E3C;
+}
+
+/* 错误信息（预留） */
+.errmassage {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 5px;
+}
