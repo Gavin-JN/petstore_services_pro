@@ -6,7 +6,7 @@ const FaverList=()=>{
     useEffect(() => {
         const token =localStorage.getItem('token');
         axios
-            .get(` http://localhost:8020/api/carts/list`,{
+            .get(` http://localhost:8060/api/carts/list`,{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }

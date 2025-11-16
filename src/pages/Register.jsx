@@ -32,8 +32,14 @@ const Register = () => {
     useEffect(() => {
         const checkUsername = async () => {
             try {
-                const res = await axios.get(` http://localhost:8010/api/accounts/sessions?username=${formData.username}`);
-                if (res.data.exists) {
+                const res = await axios.post(`http://localhost:8060/api/accounts/sessions?username=${formData.username}`,{},{
+          withCredentials: true, // 与后端 allow-credentials: true 对应，跨域必须加
+          headers: {
+            "Content-Type": "application/json", // 明确请求体格式为 JSON
+          },
+        });
+
+                if (res.data.status) {
                     setUsernameExists(true);
                 } else {
                     setUsernameExists(false);
@@ -57,7 +63,8 @@ const Register = () => {
         }
 
         try {
-            const res = await axios.post(' http://localhost:8010/api/accounts', formData);
+            const res = await axios.post(' http://localhost:8060/api/accounts', formData);
+            console.log(res.data)
             if (res.data.status === 0) {
                 alert('注册成功！');
                 naviagte('/login')

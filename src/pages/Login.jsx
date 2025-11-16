@@ -18,14 +18,14 @@ const handleChange = (e) => {
 };
 
 const handleLogin = () => {
-    window.location.href = " http://localhost:8010/api/accounts/oauth/render";
+    window.location.href = " http://localhost:8060/api/accounts/oauth/render";
 };
 
 const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-    const response = await axios.post(' http://localhost:8010/api/accounts  ', formData);
+    const response = await axios.get('http://localhost:8060/api/accounts',{params:formData});
     const res = response.data;
 
     if (res.status === 0) {

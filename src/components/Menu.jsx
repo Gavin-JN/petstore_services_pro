@@ -10,7 +10,7 @@ const Menu=()=>{
         let isMounted = true;  // 防止组件卸载后 setState
         axios({
             method: 'GET',
-            url: ' http://localhost:8010/api/accounts/status'
+            url: ' http://localhost:8060/api/accounts/status'
         }).then((res) => {
             if (isMounted) {
                 if (res.data.status == '0') {
@@ -35,7 +35,7 @@ const Menu=()=>{
     const handleSignOut=()=>{
         const token =localStorage.getItem('token');
             axios
-                .delete(` http://localhost:8010/api/accounts`,
+                .delete(` http://localhost:8060/api/accounts`,
                     {
                     headers:{
                         Authorization:`Bearer ${token}`

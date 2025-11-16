@@ -21,7 +21,7 @@ const Product=()=>{
     useEffect(() => {
         if (productId) {
         axios
-            .get(` http://localhost:8030/api/categories/product?productId=${productId}`)
+            .get(` http://localhost:8060/api/categories/product?productId=${productId}`)
             .then((res) => {
             if (res.data.status == '0') {
                 setList(res.data.data.itemList);
@@ -45,7 +45,7 @@ const Product=()=>{
             return;
         }
     
-        axios.post(` http://localhost:8020/api/cart?itemId=${itemId}`, {}, {
+        axios.post(` http://localhost:8060/api/cart?itemId=${itemId}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`
             }

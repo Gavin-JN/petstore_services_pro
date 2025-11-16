@@ -16,7 +16,7 @@ const Category=()=>{
     useEffect(() => {
         if (categoryId) {
         axios
-            .get(` http://localhost:8030/api/categories?categoryId=${categoryId}`)
+            .get(` http://localhost:8060/api/categories?categoryId=${categoryId}`)
             .then((res) => {
             if (res.data.status == '0') {
                 setList(res.data.data.productList);
