@@ -10,7 +10,7 @@ const Ccart=()=>{
     useEffect(() => {
         const token =localStorage.getItem('token');
         axios
-            .get(` http://localhost:8060/api/carts`,{
+            .get(` /api/carts`,{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -36,7 +36,7 @@ const Ccart=()=>{
         const oldQuantity = oldItem ? oldItem.quantity : 0;
         const sub = newQuantity - oldQuantity;
         if (!token) return;
-        axios.put(` http://localhost:8060/api/carts?itemId=${itemId}&&quantity=${newQuantity}`, {
+        axios.put(` /api/carts?itemId=${itemId}&&quantity=${newQuantity}`, {
         }, {
             headers: { Authorization: `Bearer ${token}` }
         })
@@ -72,7 +72,7 @@ const Ccart=()=>{
         console.error("Token 不存在，无法清空购物车！");
         return;
     }
-    axios.post(` http://localhost:8060/api/carts/blank`, {}, {
+    axios.post(` /api/carts/blank`, {}, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -100,7 +100,7 @@ const Ccart=()=>{
             console.error("Token 不存在，无法删除商品！");
             return;
         }
-        axios.delete(` http://localhost:8060/api/carts?itemId=${itemId}`, {
+        axios.delete(` /api/carts?itemId=${itemId}`, {
             // data: { itemId: itemId },  // 发送 itemId
             headers: {
                 Authorization: `Bearer ${token}`

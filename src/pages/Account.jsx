@@ -20,7 +20,7 @@ const Account=()=>{
     useEffect(() => {
         const token =localStorage.getItem('token');
         axios
-            .get(`http://localhost:8060/api/accounts/users`,{
+            .get(`/api/accounts/users`,{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -47,7 +47,7 @@ const Account=()=>{
             e.preventDefault();
             const token =localStorage.getItem('token');
             axios
-                .put(` http://localhost:8060/api/accounts`,
+                .put(` /api/accounts`,
                     user,
                     {
                     headers:{

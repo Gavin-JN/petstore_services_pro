@@ -10,7 +10,7 @@ const Search=()=>{
         const keyword=document.getElementById('search_text').value;
             axios({
                 method:'GET',
-                url:' http://localhost:8060/api/categories/search?keyword='+keyword,
+                url:' /api/categories/search?keyword='+keyword,
             }).then((res)=>{
                 if(res.data.status=='0'){
                     setList(res.data.data)

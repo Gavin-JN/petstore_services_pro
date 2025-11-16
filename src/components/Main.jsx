@@ -8,7 +8,7 @@ const Main=()=>{
     const showFlow=(category)=>{
         axios({
             method:'GET',
-            url:' http://localhost:8060/api/categories/flow?categoryId='+category,
+            url:' /api/categories/flow?categoryId='+category,
         }).then((res)=>{
             if(res.data.status=='0')
             {

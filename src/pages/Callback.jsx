@@ -17,7 +17,7 @@ function Callback() {
       sessionStorage.setItem("oauth_processed", cacheKey);
 
       axios
-        .get(" http://localhost:8060/api/oauth/callback", { params: { code, state } })
+        .get(" /api/oauth/callback", { params: { code, state } })
         .then(res => {
           const { token, user } = res.data;
           if (token) {
